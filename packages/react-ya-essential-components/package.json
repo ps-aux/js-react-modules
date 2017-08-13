@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack --progress --colors --watch",
+    "start": "webpack-dev-server --open --hot --progress --colors --watch --config dev/webpack.config.dev.js",
     "test": "jest"
   },
   "repository": {
@@ -42,8 +42,10 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.2.0",
     "eslint-plugin-standard": "^3.0.1",
+    "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
     "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "release-it": "^2.8.5",
     "webpack": "^3.3.0",
@@ -58,6 +60,6 @@
   ],
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-ya-forms": "^0.3.8"
+    "react-ya-forms": "^0.3.12"
   }
 }

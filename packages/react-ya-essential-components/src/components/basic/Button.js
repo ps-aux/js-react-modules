@@ -1,7 +1,9 @@
 import React from 'react'
+import { createClass } from './util'
 
-const Button = ({label, icon, ...props}) =>
-    <button className="button-control" {...props}>
+const Button = ({label, icon, ...props, className}) =>
+    <button className={createClass('button', className)}
+            {...props}>
         {label}
     </button>
 
