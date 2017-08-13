@@ -5,8 +5,12 @@ export const errorCodes = {
     INVALID_EMAIL: 'validator/INVALID_EMAIL',
     TOO_SHORT: 'validator/TOO_SHORT',
     TOO_LONG: 'validator/TOO_LONG',
-    PASSWORDS_MISMATCH: 'validator/PASSWORDS_MISMATCH'
+    PASSWORDS_MISMATCH: 'validator/PASSWORDS_MISMATCH',
+    INVALID_FORMAT: 'validator/INVALID_FORMAT',
+    TOO_SMALL: 'validator/TOO_SMALL'
 }
+
+const EMAIL_PATTERN = /[a-zA-Z0-9\+\.\_\%\-\+]{1,256}\@[a-zA-Z0-9][a-zA-Z0-9\-]{0,64}(\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})/
 
 const defaultRule = {
     required: true
@@ -15,6 +19,8 @@ const defaultRule = {
 const validateValue = (value, rule = defaultRule) => {
     if (!value)
         value = ''
+    value = value.toString()
+
     rule = {...defaultRule, ...rule}
 
     // If not required and is empty
@@ -24,7 +30,8 @@ const validateValue = (value, rule = defaultRule) => {
     if (!value)
         return errorCodes.EMPTY
 
-    if (rule.email && !validator.isEmail(value))
+
+    if (rule.email && !isEmail(value))
         return errorCodes.INVALID_EMAIL
 
     if (rule.minLen && !validator.isLength(value,
@@ -34,6 +41,29 @@ const validateValue = (value, rule = defaultRule) => {
     if (rule.maxLen && !validator.isLength(value,
             {max: rule.maxLen}))
         return errorCodes.TOO_LONG
+
+    if (rule.format && !rule.format.test(value))
+        return errorCodes.INVALID_FORMAT
+
+    if (rule.gt != null) {
+        if (!isNumber(value))
+            return errorCodes.INVALID_FORMAT
+        if (value <= rule.gt)
+            return errorCodes.TOO_SMALL
+    }
+}
+
+const isEmail = str => EMAIL_PATTERN.test(str)
+
+
+const isNumber = str => {
+    if (!str)
+        return false
+
+    if (!str.length)
+        return false
+
+    return !isNaN(str)
 }
 
 export const validate = (vals, rules) => {
@@ -60,7 +90,7 @@ export const validate = (vals, rules) => {
     return errors
 }
 
-export const rules = {
+export const customRules = {
     passwordMatches: vals => {
         const {password, confirmedPassword} = vals
 
