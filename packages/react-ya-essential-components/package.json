@@ -1,14 +1,12 @@
 {
   "name": "react-ya-essential-components",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Yet anoter React forms",
   "main": "lib/index.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack --progress --colors --watch",
-    "test": "jest",
-    "test2": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -47,6 +45,7 @@
     "jest": "^20.0.4",
     "react": "^15.6.1",
     "react-test-renderer": "^15.6.1",
+    "release-it": "^2.8.5",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1",
     "yargs": "^8.0.2"
