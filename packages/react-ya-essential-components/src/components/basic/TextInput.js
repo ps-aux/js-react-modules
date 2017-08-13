@@ -12,6 +12,7 @@ const TextInput = ({onChange, icon, onIconClick, ...props}) =>
     </div>
 
 TextInput.propTypes = {
+    name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired
 }

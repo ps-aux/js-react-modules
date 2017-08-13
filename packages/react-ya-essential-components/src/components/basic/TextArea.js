@@ -12,7 +12,8 @@ const TextArea = ({value, onChange, placeholder, rows = 4}) =>
 
 TextArea.propTypes = {
     name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired
 }
 
 export default TextArea

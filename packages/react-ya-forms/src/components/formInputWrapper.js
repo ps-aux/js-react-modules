@@ -2,9 +2,12 @@ import React from 'react'
 
 export const asFormInput = InputComponent => {
 
+    if (!InputComponent)
+        throw new Error('InputComponent not specified')
+
     class FormInput extends React.Component {
 
-        render() {
+        render () {
             const {error, className, ...childProps} = this.props
 
             return <div className={`form-input ${className}`}>
@@ -13,7 +16,6 @@ export const asFormInput = InputComponent => {
                 <div className="input-error">{error.text}</div>}
             </div>
         }
-
     }
 
     FormInput.isFormInput = true

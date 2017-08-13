@@ -1,5 +1,7 @@
-const lib = require('../lib')
+import { asFormInput } from '../lib'
 
-it('A test', () => {
-
+it('asFormInput validates empty input', () => {
+    expect(() => {
+        asFormInput(null)
+    }).toThrow()
 })

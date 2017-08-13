@@ -59,6 +59,6 @@
   ],
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-ya-forms": "^0.3.4"
+    "react-ya-forms": "^0.3.8"
   }
 }

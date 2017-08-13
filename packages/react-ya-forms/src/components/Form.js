@@ -147,10 +147,9 @@ class Form extends Component {
 }
 
 Form.propTypes = {
-    onSubmit: PropTypes.bool.isRequired,
+    onSubmit: PropTypes.func.isRequired
 }
 
-Form.propTypes = {}
 
 export default Form
 
@@ -181,11 +180,10 @@ const findInputElements = children => {
         if (isFormInput(c)) {
             inputs.push(c)
         } else if (isCollection(c)) {
-            //TODO duplicated code
+            // TODO duplicated code
             const res = findInputElements(c)
             inputs.push(...res)
-        }
-        else if (hasChildren(c)) {
+        } else if (hasChildren(c)) {
             const childInputs = findInputElements(c.props.children)
             inputs.push(...childInputs)
         }
@@ -202,5 +200,3 @@ const getInputNames = component =>
             throw new Error('Missing \'name\' property on', e)
         return name
     })
-
-
