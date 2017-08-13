@@ -1,12 +1,13 @@
 {
   "name": "react-ya-forms",
-  "version": "0.3.8",
+  "version": "0.3.10",
   "description": "Yet anoter React forms",
   "main": "lib/index.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack --progress --colors --watch",
     "test": "jest",
+    "release": "npm-run-all build test && release-it",
     "test-build": "npm-run-all build test",
     "test2": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
     "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
@@ -47,8 +48,10 @@
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^20.0.4",
     "mocha": "^3.5.0",
+    "npm-run-all": "^4.0.2",
     "once": "^1.4.0",
     "react": "^15.6.1",
+    "release-it": "^2.8.5",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1",
     "yargs": "^8.0.2"
