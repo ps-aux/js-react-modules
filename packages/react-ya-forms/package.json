@@ -1,12 +1,13 @@
 {
   "name": "react-ya-forms",
-  "version": "0.3.1",
+  "version": "0.3.4",
   "description": "Yet anoter React forms",
   "main": "lib/index.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack --progress --colors --watch",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
+    "test": "jest",
+    "test2": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
     "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
   },
   "repository": {
@@ -44,20 +45,26 @@
     "eslint-plugin-react": "^7.2.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^20.0.4",
+    "mocha": "^3.5.0",
+    "once": "^1.4.0",
+    "react": "^15.6.1",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1",
     "yargs": "^8.0.2"
   },
-
   "peerDependencies": {
     "react": "^15.6.0"
   },
-
   "files": [
     "lib/"
   ],
   "dependencies": {
     "prop-types": "^15.5.10",
     "validator": "^8.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "src/components/formInputWrapper'": "./src/components/Form"
+    }
   }
 }

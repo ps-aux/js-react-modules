@@ -7,7 +7,6 @@
   "plugins": [
     "transform-object-rest-spread",
     "transform-class-properties",
-    "add-module-exports",
-    "transform-es2015-modules-umd"
+    "add-module-exports"
   ]
 }

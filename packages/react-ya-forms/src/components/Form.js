@@ -1,17 +1,17 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { validate } from 'src/validation/validator'
 
 let _errorTranslator
 
-export const setGlobalErrorTranslator = translator => {
-    _errorTranslator = translator
-}
-
 class Form extends Component {
 
-    constructor(props) {
-        super(props)
+    static setGlobalErrorTranslator = translator => {
+        _errorTranslator = translator
+    }
 
+    constructor (props) {
+        super(props)
 
         this.validationRules = props.validationRules || {}
 
@@ -28,14 +28,14 @@ class Form extends Component {
         this.errorTranslator = props.errorTranslator || _errorTranslator
 
         if (!this.errorTranslator)
-            console.error('Error translator not set')
+            console.warn('Error translator not set')
     }
 
-    setFields(props) {
+    setFields (props) {
         this.fields = getInputNames(props)
     }
 
-    componentWillReceiveProps(props) {
+    componentWillReceiveProps (props) {
         if (props.errors) {
             this.setState({
                 errors: {...this.state.errors, ...props.errors}
@@ -44,14 +44,12 @@ class Form extends Component {
         this.setFields(props)
     }
 
-
-    valChanged(name, val) {
+    valChanged (name, val) {
         const vals = {...this.state.vals, [name]: val}
         this.setState({vals})
     }
 
-
-    getVisibleVals() {
+    getVisibleVals () {
         const {vals} = this.state
 
         const res = {}
@@ -60,7 +58,7 @@ class Form extends Component {
         return res
     }
 
-    onSubmit(e) {
+    onSubmit (e) {
         e.preventDefault()
 
         // Filter only those vals for which fiels are rendered
@@ -80,7 +78,7 @@ class Form extends Component {
         }
     }
 
-    render() {
+    render () {
         const children = this.mappedChildren(this.props, [])
         const {className} = this.props
 
@@ -90,7 +88,7 @@ class Form extends Component {
         </form>
     }
 
-    mappedChildren(props, namesAccum) {
+    mappedChildren (props, namesAccum) {
 
         return React.Children.map(props.children,
             ch => {
@@ -120,7 +118,7 @@ class Form extends Component {
             })
     }
 
-    enhancedInput(formInput) {
+    enhancedInput (formInput) {
         const name = formInput.props.name
         const val = this.state.vals[name]
         const errorCode = this.state.errors[name]
@@ -128,15 +126,12 @@ class Form extends Component {
         let error = null
         if (errorCode) {
 
-            const text = this.errorTranslator ?
-                this.errorTranslator(errorCode) :
-                errorCode
+            const text = this.errorTranslator ? this.errorTranslator(errorCode) : errorCode
 
             error = {
                 code: errorCode, text
             }
         }
-
 
         return React.cloneElement(formInput, {
             onChange: val => {

@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-const TextInput = ({onChange, icon, onIconClick, ...props}) => (
+const TextInput = ({onChange, icon, onIconClick, ...props}) =>
     <div className="text--control">
         {icon && <img className={`input-icon ${onIconClick ? 'clickable' : ''}`}
                       onClick={onIconClick}
@@ -8,7 +9,7 @@ const TextInput = ({onChange, icon, onIconClick, ...props}) => (
                       role="presentation"/>}
         <input onChange={e => onChange(e.target.value)}
                {...props}/>
-    </div> )
+    </div>
 
 TextInput.propTypes = {
     value: PropTypes.string.isRequired,
