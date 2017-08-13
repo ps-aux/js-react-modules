@@ -5,7 +5,9 @@ import _textInput from 'src/components/basic/TextInput'
 
 import { FormTextInput as _formTextInput } from 'src/components/form/inputs'
 
-import { Form as _Form, validation } from 'react-ya-forms'
+import { validation } from 'react-ya-forms'
+
+import { _Form } from 'src/components/form/Form'
 
 export const GenericForm = _genericForm
 

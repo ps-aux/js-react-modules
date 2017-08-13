@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { createClass } from './util'
 
-const TextInput = ({onChange, icon, onIconClick, ...props}) =>
+const TextInput = ({onChange, icon, onIconClick, className, ...props}) =>
     <div className={createClass('text-input', className)}>
         {icon && <img className={`input-icon ${onIconClick ? 'clickable' : ''}`}
                       onClick={onIconClick}

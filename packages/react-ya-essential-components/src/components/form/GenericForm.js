@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form } from 'react-ya-forms'
+import Form from 'src/components/form/Form'
 import Button from 'src/components/basic/Button'
 import { FormTextInput } from 'src/components/form/inputs'
 
