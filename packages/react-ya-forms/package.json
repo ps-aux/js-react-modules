@@ -1,6 +1,6 @@
 {
   "name": "react-ya-forms",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "description": "Yet anoter React forms",
   "main": "lib/index.js",
   "scripts": {
