@@ -1,13 +1,10 @@
-import React from "react";
-import {asFormInput} from 'src/lib/forms/components/formInputWrapper'
-import TextArea from 'src/lib/controls/TextArea'
-import TextInput from 'src/lib/controls/TextInput'
-import f from 'src/lib/forms/components/Form'
+import { asFormInput as _asFormInput } from 'src/components/formInputWrapper'
+import _form from 'src/components/Form'
 
-export const FormTextArea = asFormInput(TextArea)
+import validatorImport from 'src/validation/validator'
 
-export const FormTextInput = asFormInput(TextInput)
+export const Form = _form
 
-export const Form = f
+export const asFormInput = _asFormInput
 
-
+export const validator = validatorImport

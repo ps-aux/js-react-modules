@@ -1,4 +1,4 @@
-import validator from 'validator';
+import validator from 'validator'
 
 export const errorCodes = {
     EMPTY: 'validator/EMPTY',
@@ -27,8 +27,6 @@ const validateValue = (value, rule = defaultRule) => {
     if (rule.email && !validator.isEmail(value))
         return errorCodes.INVALID_EMAIL
 
-
-    console.debug(value)
     if (rule.minLen && !validator.isLength(value,
             {min: rule.minLen}))
         return errorCodes.TOO_SHORT
@@ -59,10 +57,8 @@ export const validate = (vals, rules) => {
 
     }
 
-
     return errors
 }
-
 
 export const customRules = {
     passwordMatches: vals => {

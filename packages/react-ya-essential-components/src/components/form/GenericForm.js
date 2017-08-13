@@ -1,6 +1,7 @@
-import React from "react";
-import {Form, FormTextInput} from 'src/lib/forms/components'
-import Button from 'src/lib/controls/Button'
+import React from 'react'
+import { Form } from 'react-ya-forms'
+import Button from 'src/components/basic/Button'
+import { FormTextInput } from 'src/components/form/inputs'
 
 const GenericForm = ({schema, onSubmit}) => (
     <Form onSubmit={onSubmit}>

@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React from 'react'
 
 export const asFormInput = InputComponent => {
 
     class FormInput extends React.Component {
-
 
         render() {
             const {error, className, ...childProps} = this.props
@@ -21,4 +20,3 @@ export const asFormInput = InputComponent => {
 
     return FormInput
 }
-

@@ -1,5 +1,5 @@
-import React, {Component, PropTypes} from "react";
-import {validate} from 'src/lib/forms/validation/validator'
+import React, { Component, PropTypes } from 'react'
+import { validate } from 'src/validation/validator'
 
 let _errorTranslator
 
