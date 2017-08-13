@@ -1,6 +1,6 @@
 {
   "name": "react-ya-essential-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yet anoter React forms",
   "main": "lib/index.js",
   "scripts": {
@@ -56,6 +56,6 @@
   ],
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-ya-forms": "^0.2.0"
+    "react-ya-forms": "^0.3.0"
   }
 }
