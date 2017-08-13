@@ -79,11 +79,14 @@ class Form extends Component {
     }
 
     render () {
+
         const children = this.mappedChildren(this.props, [])
         const {className} = this.props
 
+        const classes = ['ya-form', className]
+
         return <form onSubmit={e => this.onSubmit(e)}
-                     className={className}>
+                     className={classes.join(' ')}>
             {children}
         </form>
     }
@@ -149,7 +152,6 @@ class Form extends Component {
 Form.propTypes = {
     onSubmit: PropTypes.func.isRequired
 }
-
 
 export default Form
 

@@ -10,7 +10,7 @@ export const asFormInput = InputComponent => {
         render () {
             const {error, className, ...childProps} = this.props
 
-            return <div className={`form-input ${className}`}>
+            return <div className={`form-input ${className || ''}`}>
                 <InputComponent {...childProps}/>
                 {error &&
                 <div className="input-error">{error.text}</div>}
