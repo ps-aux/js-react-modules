@@ -90,7 +90,7 @@ export const validate = (vals, rules) => {
     return errors
 }
 
-export const customRules = {
+export const rules = {
     passwordMatches: vals => {
         const {password, confirmedPassword} = vals
 

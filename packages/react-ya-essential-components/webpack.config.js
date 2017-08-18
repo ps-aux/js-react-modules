@@ -39,7 +39,6 @@ const config = {
         ]
     },
     externals: [
-        'react-ya-forms',
         'react'
     ],
 

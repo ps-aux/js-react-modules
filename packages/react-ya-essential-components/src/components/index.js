@@ -7,6 +7,9 @@ import { FormTextInput as _formTextInput } from 'src/components/form/inputs'
 
 import { validation } from 'react-ya-forms'
 
+if (!validation)
+    throw new Error('Could not import validation from react-ya-forms')
+
 import  _Form from 'src/components/form/Form'
 
 export const GenericForm = _genericForm

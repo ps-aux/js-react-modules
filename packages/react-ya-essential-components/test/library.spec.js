@@ -1,5 +1,5 @@
 /* eslint-disable */
-/* global describe, it, before */
+/* global describe, it, before, expect */
 ``
 
 import React from 'react'
@@ -52,7 +52,10 @@ it('Can instantiate form input components', () => {
 })
 
 it('Can import and use formValidation', () => {
-    const {errorCodes, customRules} = formValidation
+    const {errorCodes, rules} = formValidation
+
+    expect.anything(errorCodes)
+    expect.anything(rules)
 })
 
 

@@ -1,6 +1,6 @@
 {
   "name": "react-ya-essential-components",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Yet anoter React forms",
   "main": "lib/index.js",
   "scripts": {
@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/ps-aux/js-react-modules#readme",
   "devDependencies": {
-    "babel-core": "^6.25.0",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-undeclared-variables-check": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
@@ -42,7 +42,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.2.0",
+    "eslint-plugin-react": "^7.2.1",
     "eslint-plugin-standard": "^3.0.1",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
@@ -51,7 +51,7 @@
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "release-it": "^2.8.5",
-    "webpack": "^3.3.0",
+    "webpack": "^3.5.5",
     "webpack-dev-server": "^2.5.1",
     "yargs": "^8.0.2"
   },
@@ -63,6 +63,6 @@
   ],
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-ya-forms": "^0.3.13"
+    "react-ya-forms": "^0.3.15"
   }
 }
