@@ -1,4 +1,6 @@
 import React from 'react'
-import { Form as FormImpl } from 'react-ya-forms'
+import {Form as FormImpl} from 'react-ya-forms'
 
-export default FormImpl
+const Form = (props) => <FormImpl className="form" {...props}/>
+
+export default Form

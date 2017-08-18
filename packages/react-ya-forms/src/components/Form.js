@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import { validate } from 'src/validation/validator'
+import {validate} from 'src/validation/validator'
 
 let _errorTranslator
 
@@ -10,7 +10,7 @@ class Form extends Component {
         _errorTranslator = translator
     }
 
-    constructor (props) {
+    constructor(props) {
         super(props)
 
         this.validationRules = props.validationRules || {}
@@ -31,11 +31,11 @@ class Form extends Component {
             console.warn('Error translator not set')
     }
 
-    setFields (props) {
+    setFields(props) {
         this.fields = getInputNames(props)
     }
 
-    componentWillReceiveProps (props) {
+    componentWillReceiveProps(props) {
         if (props.errors) {
             this.setState({
                 errors: {...this.state.errors, ...props.errors}
@@ -44,12 +44,12 @@ class Form extends Component {
         this.setFields(props)
     }
 
-    valChanged (name, val) {
+    valChanged(name, val) {
         const vals = {...this.state.vals, [name]: val}
         this.setState({vals})
     }
 
-    getVisibleVals () {
+    getVisibleVals() {
         const {vals} = this.state
 
         const res = {}
@@ -58,7 +58,7 @@ class Form extends Component {
         return res
     }
 
-    onSubmit (e) {
+    onSubmit(e) {
         e.preventDefault()
 
         // Filter only those vals for which fiels are rendered
@@ -78,12 +78,12 @@ class Form extends Component {
         }
     }
 
-    render () {
+    render() {
 
         const children = this.mappedChildren(this.props, [])
         const {className} = this.props
 
-        const classes = ['ya-form', className]
+        const classes = [className, 'ya-form']
 
         return <form onSubmit={e => this.onSubmit(e)}
                      className={classes.join(' ')}>
@@ -91,7 +91,7 @@ class Form extends Component {
         </form>
     }
 
-    mappedChildren (props, namesAccum) {
+    mappedChildren(props, namesAccum) {
 
         return React.Children.map(props.children,
             ch => {
@@ -121,7 +121,7 @@ class Form extends Component {
             })
     }
 
-    enhancedInput (formInput) {
+    enhancedInput(formInput) {
         const name = formInput.props.name
         const val = this.state.vals[name]
         const errorCode = this.state.errors[name]
