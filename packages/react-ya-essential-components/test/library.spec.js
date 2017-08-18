@@ -6,6 +6,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import {
     Button,
+    configureForms,
     Form,
     FormTextInput,
     formValidation,
@@ -23,7 +24,7 @@ const anyErrorTranslator = () => 'error'
 
 const anyInputProps = {value: anyVal, onChange: anyFun, name: anyName}
 
-Form.setGlobalErrorTranslator(anyErrorTranslator)
+configureForms({errorTranslator: anyErrorTranslator})
 
 it('Can instantiate Form', () => {
     renderer.create(

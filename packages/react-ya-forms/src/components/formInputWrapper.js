@@ -7,10 +7,14 @@ export const asFormInput = InputComponent => {
 
     class FormInput extends React.Component {
 
-        render () {
+        render() {
             const {error, className, ...childProps} = this.props
 
-            return <div className={`form-input ${className || ''}`}>
+            const classes = [className, 'form-input']
+            if (error)
+                classes.push('has-error')
+
+            return <div className={classes.join(' ')}>
                 <InputComponent {...childProps}/>
                 {error &&
                 <div className="input-error">{error.text}</div>}

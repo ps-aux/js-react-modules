@@ -5,7 +5,7 @@ import _textInput from 'src/components/basic/TextInput'
 
 import { FormTextInput as _formTextInput } from 'src/components/form/inputs'
 
-import { validation } from 'react-ya-forms'
+import { validation, Form as yaForm } from 'react-ya-forms'
 
 if (!validation)
     throw new Error('Could not import validation from react-ya-forms')
@@ -25,3 +25,7 @@ export const TextArea = _textArea
 export const TextInput = _textInput
 
 export const formValidation = validation
+
+export const configureForms =({errorTranslator}) => {
+    yaForm.setGlobalErrorTranslator(errorTranslator)
+}
