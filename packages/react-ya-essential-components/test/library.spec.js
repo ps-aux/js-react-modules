@@ -4,7 +4,15 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Button, Form, FormTextInput, GenericForm, TextArea, TextInput } from '../lib/index.js'
+import {
+    Button,
+    Form,
+    FormTextInput,
+    formValidation,
+    GenericForm,
+    TextArea,
+    TextInput
+} from '../lib/index.js'
 
 const anyFun = () => null
 const anyVal = 'any-val'
@@ -41,6 +49,10 @@ it('Can instantiate basic components', () => {
 
 it('Can instantiate form input components', () => {
     renderer.create(<FormTextInput {...anyInputProps}/>)
+})
+
+it('Can import and use formValidation', () => {
+    const {errorCodes, customRules} = formValidation
 })
 
 

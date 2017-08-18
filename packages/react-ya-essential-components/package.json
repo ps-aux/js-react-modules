@@ -1,6 +1,6 @@
 {
   "name": "react-ya-essential-components",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Yet anoter React forms",
   "main": "lib/index.js",
   "scripts": {
