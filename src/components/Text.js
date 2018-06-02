@@ -1,7 +1,10 @@
 import React from 'react'
+import { addClassName } from '../utils'
 
-const Text = ({children, value, ...rest}) =>
-    <span {...rest}>
+const cn = addClassName('text')
+
+const Text = ({children, value, className, ...rest}) =>
+    <span cn={cn(className)} {...rest}>
         {children || value}
     </span>
 

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders additional className 1`] = `
+<button
+  className="button additional"
+>
+  <span
+    cn="text"
+  >
+    any
+  </span>
+</button>
+`;
+
+exports[`Button renders children content properly 1`] = `
+<button
+  className="button"
+>
+  Text
+</button>
+`;
+
+exports[`Button renders label text 1`] = `
+<button
+  className="button"
+>
+  <span
+    cn="text"
+  >
+    Text
+  </span>
+</button>
+`;

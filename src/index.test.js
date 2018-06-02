@@ -1,4 +1,4 @@
-import def, { Button, Text, View } from './index'
+import { Button, Text, View, all } from './index'
 
 describe('index.js', () => {
 
@@ -9,8 +9,8 @@ describe('index.js', () => {
     }
 
     const isPartOfDefaultExport = (name) => {
-        it(`${name} is part of default export`, () => {
-            expect(def[name]).toBeTruthy()
+        it(`${name} is part of default 'all' named export`, () => {
+            expect(all[name]).toBeTruthy()
         })
     }
 

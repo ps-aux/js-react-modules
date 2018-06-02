@@ -1,12 +1,15 @@
 import React from 'react'
+import { addClassName } from '../utils'
 
 const style = {
     display: 'flex',
     flexDirection: 'column'
 }
 
-const View = ({ children, ...rest }) =>
-    <div style={style} {...rest}>
+const cn = addClassName('view')
+
+const View = ({children, className, ...rest}) =>
+    <div style={style} className={cn(className)} {...rest}>
         {children}
     </div>
 

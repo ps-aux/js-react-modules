@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders additional className 1`] = `
+<span
+  cn="text additional"
+>
+  any
+</span>
+`;
+
+exports[`Text renders children content properly 1`] = `
+<span
+  cn="text"
+>
+  Text
+</span>
+`;
+
+exports[`Text renders text as value properly 1`] = `
+<span
+  cn="text"
+>
+  Text
+</span>
+`;
