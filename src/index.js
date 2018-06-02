@@ -6,7 +6,7 @@ export const Button = _Button
 export const View = _View
 export const Text = _Text
 
-export default {
+export const all = {
     Button,
     View,
     Text
