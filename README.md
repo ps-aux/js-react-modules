@@ -1,12 +1,16 @@
 # react-basic-components
 
-> Basic components for React components implemented in DOM
+> Basic components for React for DOM
 
 ## Install
 
 ```bash
 npm install --save react-basic-components
 ```
+
+## Storybook
+
+See live [storybook](https://ps-aux.github.io/react-basic-components/)
 
 ## License
 
