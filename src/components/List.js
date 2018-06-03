@@ -8,9 +8,9 @@ const List = ({
               }) => {
 
     const data = items
-        .map(i => ({
-            props: {...itemProps, ...mapProps(i)},
-            key: mapKey ? mapKey(i) : i[keyProp]
+        .map((i, index) => ({
+            props: {...itemProps, ...mapProps(i, index)},
+            key: mapKey ? mapKey(i, index) : i[keyProp]
         }))
 
     return <Fragment>

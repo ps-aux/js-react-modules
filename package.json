@@ -1,6 +1,6 @@
 {
     "name": "@ps-aux/react-basic-components",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Basic components for React components implemented in DOM",
     "author": "ps-aux",
     "license": "MIT",
@@ -18,7 +18,7 @@
         "precommit": "lint-staged",
         "deploy": "gh-pages -d example/build",
         "storybook": "start-storybook -p 9009",
-        "publish": "npm publish --access public",
+        "pub": "npm publish --access public",
         "build-storybook": "build-storybook",
         "deploy-storybook": "storybook-to-ghpages",
         "lint": "eslint src/**/*.js"
