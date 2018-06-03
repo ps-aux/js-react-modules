@@ -1,4 +1,5 @@
-# react-basic-components
+# react-basic-components ![Build status](https://travis-ci.com/ps-aux/react-basic-components.svg?branch=master) [![CircleCI](https://circleci.com/gh/ps-aux/react-basic-components.svg?style=svg)](https://circleci.com/gh/ps-aux/react-basic-components)
+
 
 > Basic components for React for DOM
 
