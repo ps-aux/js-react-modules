@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const List = ({
-                  items, idProp = 'id', mapId,
+                  items, keyProp = 'id', mapKey,
                   component: Comp, render,
                   mapProps = p => p,
-                  itemProps = {}, ...rest
+                  itemProps = {}
               }) => {
-    if (render)
-        return items.map((i, index) =>
-            render({...itemProps, ...i}, index, rest))
 
-    return items.map(i =>
-        <Comp {...itemProps} {...mapProps(i)}/>)
+    const data = items
+        .map(i => ({
+            props: {...itemProps, ...mapProps(i)},
+            key: mapKey ? mapKey(i) : i[keyProp]
+        }))
+
+    return <Fragment>
+        {render ? data.map(({props, key}) => render(props, key))
+            : data.map(({props, key}) => <Comp {...props} key={key}/>)
+        }
+    </Fragment>
 
 }
 
