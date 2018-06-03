@@ -14,7 +14,7 @@ exports[`View renders additional className 1`] = `
 </div>
 `;
 
-exports[`View renders children properly 1`] = `
+exports[`View renders children 1`] = `
 <div
   className="view"
   style={
@@ -29,6 +29,25 @@ exports[`View renders children properly 1`] = `
   </div>
   <div>
     Child 1
+  </div>
+</div>
+`;
+
+exports[`View renders horizontaly when set 1`] = `
+<div
+  className="view"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <div>
+    1
+  </div>
+  <div>
+    2
   </div>
 </div>
 `;

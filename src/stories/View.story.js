@@ -10,3 +10,9 @@ storiesOf('View', module)
             <div>Child 2</div>
             <div>Child 3</div>
         </View>)
+    .add('horizontal', () =>
+        <View horizontal>
+            <div>Child 1</div>
+            <div>Child 2</div>
+            <div>Child 3</div>
+        </View>)
