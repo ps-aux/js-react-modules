@@ -3,7 +3,8 @@ import React from 'react'
 const List = ({
                   items, idProp = 'id', mapId,
                   component: Comp, render,
-                  mapProps = p => p, itemProps = {}, ...rest
+                  mapProps = p => p,
+                  itemProps = {}, ...rest
               }) => {
     if (render)
         return items.map((i, index) =>

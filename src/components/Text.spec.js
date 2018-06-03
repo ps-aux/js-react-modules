@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import Text from './Text'
 
-
 describe('Text renders', () => {
     it('children content properly', () => {
         const comp = renderer.create(
