@@ -4,7 +4,7 @@ import { addClassName } from '../utils'
 const cn = addClassName('text')
 
 const Text = ({children, value, className, ...rest}) =>
-    <span cn={cn(className)} {...rest}>
+    <span className={cn(className)} {...rest}>
         {children || value}
     </span>
 
