@@ -5,7 +5,7 @@ exports[`Button renders additional className 1`] = `
   className="button additional"
 >
   <span
-    cn="text"
+    className="text"
   >
     any
   </span>
@@ -25,7 +25,7 @@ exports[`Button renders label text 1`] = `
   className="button"
 >
   <span
-    cn="text"
+    className="text"
   >
     Text
   </span>

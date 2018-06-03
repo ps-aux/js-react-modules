@@ -2,7 +2,7 @@
 
 exports[`Text renders additional className 1`] = `
 <span
-  cn="text additional"
+  className="text additional"
 >
   any
 </span>
@@ -10,7 +10,7 @@ exports[`Text renders additional className 1`] = `
 
 exports[`Text renders children content properly 1`] = `
 <span
-  cn="text"
+  className="text"
 >
   Text
 </span>
@@ -18,7 +18,7 @@ exports[`Text renders children content properly 1`] = `
 
 exports[`Text renders text as value properly 1`] = `
 <span
-  cn="text"
+  className="text"
 >
   Text
 </span>
